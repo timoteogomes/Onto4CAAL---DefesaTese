@@ -1,0 +1,2042 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.owl-ontologies.com/Opcao1.owl#"
+     xml:base="http://www.owl-ontologies.com/Opcao1.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#">
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/Opcao1.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#causaImpacto -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#causaImpacto">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#causaImpactoNegativo -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#causaImpactoNegativo">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#causaImpacto"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#éImpactadoNegativamentePor"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoFuncional"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#causaImpactoPositivo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#causaImpactoPositivo -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#causaImpactoPositivo">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#causaImpacto"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#éImpactadoPositivamentePor"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoFuncional"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#define -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#define">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#foiDefinidoPor"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Requisito"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#estabelece -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#estabelece">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Compliance"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Requisito"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#estabeleceRequisitoNF -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#estabeleceRequisitoNF">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#estabelece"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#foiEstabelecido"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Compliance"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#foiDefinidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#foiDefinidoPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#foiEstabelecido -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#foiEstabelecido">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#impactaPositivamente -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#impactaPositivamente">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#influencia -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#influencia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Compliance"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#possui -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#possui">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#éUsadoPor"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Software"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#tem -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#tem">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#usadoEm"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Ambiente"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#temRequisito -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#temRequisito">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#éRequisito"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoFuncional"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#temRequisitoEtico -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#temRequisitoEtico">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#temRequisitoNF"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#temRequisitoF -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#temRequisitoF">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#temRequisito"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoFuncional"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#temRequisitoNF"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#temRequisitoNF -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#temRequisitoNF">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#temRequisito"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#temRequisitoQualidadeP -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#temRequisitoQualidadeP">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#temRequisitoNF"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#temRequisitoQualidadeU -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#temRequisitoQualidadeU">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#temRequisitoNF"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeUso"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#usadoEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#usadoEm">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Ambiente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#utiliza -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#utiliza">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#éImpactado -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#éImpactado">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#éImpactadoNegativamentePor -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#éImpactadoNegativamentePor">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#éImpactado"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#éImpactadoPositivamentePor -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#éImpactadoPositivamentePor">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#éImpactado"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#éInfluenciadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#éInfluenciadoPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#éRequisito -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#éRequisito">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#éUsadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#éUsadoPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#éUtilizado -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#éUtilizado">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#temDefinicao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#temDefinicao">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#NormasExternas"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#temDependenciaNorma -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#temDependenciaNorma">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#NormasExternas"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#temNumero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#temNumero">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#NormasExternas"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#temTitulo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Opcao1.owl#temTitulo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#NormasExternas"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AceitacaoSocial -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AceitacaoSocial">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AceitacaoUso -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AceitacaoUso">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Termo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Acessibilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Acessibilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Usabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AcompanhanteDomestico -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AcompanhanteDomestico">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Pessoa"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Adaptabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Adaptabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Portabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Adaptatividade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Adaptatividade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Adequacao -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Adequacao">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Usabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AdequacaoFuncional -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AdequacaoFuncional">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AptidaoFuncional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Agent-UFO -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Agent-UFO"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AgenteEntretenimento -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AgenteEntretenimento">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Pessoa"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Ambiente -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Ambiente">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#tem"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AmbienteExterno -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AmbienteExterno">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Ambiente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AmbienteTrabalho -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AmbienteTrabalho">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Ambiente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Analisabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Analisabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Manutenabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Aprendizagem -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Aprendizagem">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Usabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AptidaoFuncional -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AptidaoFuncional">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Asilo -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Asilo">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#InstituicaoLongaPermanenciaIdosos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaAlimentar -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaAlimentar">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaBancaria -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaBancaria">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaBeber -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaBeber">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaCompras -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaCompras">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaCulinaria -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaCulinaria">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaCurativo -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaCurativo">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaAutonomia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaAutonomia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ServicosMelhoriaAutonomia"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaConforto -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaConforto">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ServicosConforto"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaConforto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaEmergencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaEmergencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ServicosTratamentoEmergencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaAutonomia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaAutonomia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ServicosMelhoriaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaConforto -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaConforto">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ServicosConforto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaEmergencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaEmergencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ServicosTratamentoEmergencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaLimpeza -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaLimpeza">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaMedicamentosa -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaMedicamentosa">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#AssistenciaViagem -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaViagem">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Atuador -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Atuador">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Autenticidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Autenticidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Seguranca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Autonomia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Autonomia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Banheiro -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Banheiro">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Casa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Beneficencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Beneficencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#BondadeMoral -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#BondadeMoral">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Botao -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Botao">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#CaixaSom -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#CaixaSom">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Camera -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Camera">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Capacidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Capacidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#EficienciaDesempenho"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Casa -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Casa">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Ambiente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#CasaGeriatrica -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#CasaGeriatrica">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#InstituicaoLongaPermanenciaIdosos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ClienteCorporativo -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ClienteCorporativo">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Organizacao"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ClientePessoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ClientePessoal -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ClientePessoal">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Pessoa"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#CoberturaContexto -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#CoberturaContexto">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeUso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Coexistencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Coexistencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Compatibilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ComandoPorVoz -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ComandoPorVoz">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Compatibilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Compatibilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#CompletudeContexto -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#CompletudeContexto">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#CoberturaContexto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#CompletudeFuncional -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#CompletudeFuncional">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AptidaoFuncional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Compliance -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Compliance">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#estabelece"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Requisito"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#estabeleceRequisitoNF"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#influencia"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ComportamentoTempo -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ComportamentoTempo">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#EficienciaDesempenho"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Confiabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Confiabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ConfiancaSeguranca -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ConfiancaSeguranca">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Seguranca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ConfiancaUso -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ConfiancaUso">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Satisfacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Confidencialidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Confidencialidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Seguranca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Conforto -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Conforto">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Satisfacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#CorrecaoFuncional -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#CorrecaoFuncional">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AptidaoFuncional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Cuidador -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Cuidador">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Pessoa"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Decretos -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Decretos">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Internacional"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Nacional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Definicao -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Definicao">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ISO"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#NBR"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#DependenciaNorma -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#DependenciaNorma">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ISO"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#NBR"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#DeteccaoExternaEmergencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#DeteccaoExternaEmergencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaEmergencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#DeteccaoInternaEmergencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#DeteccaoInternaEmergencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaEmergencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Display -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Display">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Disponibilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Disponibilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Confiabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#éUsadoPor"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#DispositivoVestivel -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#DispositivoVestivel">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#DispositivosSinais -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#DispositivosSinais">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Educador -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Educador">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Pessoa"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Eficacia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Eficacia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeUso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Eficiencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Eficiencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeUso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#EficienciaDesempenho -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#EficienciaDesempenho">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Empregador -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Empregador">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Organizacao"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#EntradaPrincipal -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#EntradaPrincipal">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Casa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#EspecificacaoRequisitos -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#EspecificacaoRequisitos">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#PoliticasNormasInternas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#EsteticaInterfaceUsuario -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#EsteticaInterfaceUsuario">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Usabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Familiar -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Familiar">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Pessoa"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Fidelidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Fidelidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Flexibilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Flexibilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#CoberturaContexto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#HabitacoesMedicas -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#HabitacoesMedicas">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#InstituicaoLongaPermanenciaIdosos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Hardware -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Hardware"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Hospital -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Hospital">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Ambiente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ISO -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ISO">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#NormasExternas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Independencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Independencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Instabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Instabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Portabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#InstituicaoEnsino -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#InstituicaoEnsino">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Ambiente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#InstituicaoLongaPermanenciaIdosos -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#InstituicaoLongaPermanenciaIdosos">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Ambiente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#InstrucoesNormativas -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#InstrucoesNormativas">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Internacional"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Nacional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#IntegranteTimeDev -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#IntegranteTimeDev">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Pessoa"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Integridade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Integridade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Seguranca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Internacional -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Internacional">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Legislacao"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Nacional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Interoperabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Interoperabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Compatibilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Justica -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Justica">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Legislacao -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Legislacao">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Compliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Leis -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Leis">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Internacional"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Nacional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#LivreRisco -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#LivreRisco">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeUso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#LojaProdutosEspecializados -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#LojaProdutosEspecializados">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Ambiente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Manutenabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Manutenabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Maturidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Maturidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Confiabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#MitigacaoRiscoAmbiental -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#MitigacaoRiscoAmbiental">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#LivreRisco"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#MitigacaoRiscoEconomico -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#MitigacaoRiscoEconomico">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#LivreRisco"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#MitigacaoRiscoSocial -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#MitigacaoRiscoSocial">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#LivreRisco"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#MitigacaoRiscosSaudeSeguranca -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#MitigacaoRiscosSaudeSeguranca">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#LivreRisco"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Mobilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Mobilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Ambiente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Modificabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Modificabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Manutenabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Modularidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Modularidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Manutenabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#NBR -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#NBR">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#NormasExternas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Nacional -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Nacional">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Legislacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#NaoMaleficencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#NaoMaleficencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#NaoRepudio -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#NaoRepudio">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Seguranca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#NormasExternas -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#NormasExternas">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Compliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#NormatizacaoComiteEticaPesquisa -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#NormatizacaoComiteEticaPesquisa">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#PoliticasNormasInternas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Numero -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Numero">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ISO"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#NBR"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#OperabilidadeUsuario -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#OperabilidadeUsuario">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Usabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Organizacao -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Organizacao">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SocialAgent-UFO"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Pareceres -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Pareceres">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Internacional"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Nacional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Pessoa -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Pessoa">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#PhysicalAgent-UFO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#PhysicalAgent-UFO -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#PhysicalAgent-UFO">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Agent-UFO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Politica -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Politica">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#PoliticasNormasInternas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#PoliticasNormasInternas -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#PoliticasNormasInternas">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Compliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Portabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Portabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Portarias -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Portarias">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Internacional"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Nacional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Prazer -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Prazer">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Satisfacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#PrevencaoExternaEmergencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#PrevencaoExternaEmergencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaEmergencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#PrevencaoInternaEmergencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#PrevencaoInternaEmergencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaEmergencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#PrevisaoExternaEmergencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#PrevisaoExternaEmergencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaEmergencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#PrevisaoInternaEmergencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#PrevisaoInternaEmergencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaEmergencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#PrivacidadeDados -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#PrivacidadeDados">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#PrivacidadeNoUso -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#PrivacidadeNoUso">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeUso"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ProfissionalSaude -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ProfissionalSaude">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Pessoa"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ProtecaoContraErrosUsuario -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ProtecaoContraErrosUsuario">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Usabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoQualidade"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeUso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#QualidadeUso -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#QualidadeUso">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoQualidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Quarto -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Quarto">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Casa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Rastreabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Rastreabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Recipiente -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Recipiente">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Recuperabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Recuperabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Confiabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Requisito -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Requisito">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#foiDefinidoPor"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#foiEstabelecido"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Compliance"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#RequisitoFuncional -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#RequisitoFuncional">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Requisito"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#éImpactadoNegativamentePor"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#éImpactadoPositivamentePor"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Requisito"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Requisito"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#temRequisitoNF"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#temRequisitoNF"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoQualidade"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#temRequisitoNF"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Opcao1.owl#RequisitoQualidade"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Requisito"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#RequisitoQualidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#RequisitoQualidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoNaoFuncional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Resolucoes -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Resolucoes">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Internacional"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Nacional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Responsabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Responsabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Seguranca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ResponsabilidadeSocialAmbiental -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ResponsabilidadeSocialAmbiental">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Politica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Reutilizacao -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Reutilizacao">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Manutenabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#SalaEstar -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#SalaEstar">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Casa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#SalaJantar -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#SalaJantar">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Casa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Satisfacao -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Satisfacao">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeUso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Seguranca -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Seguranca">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#SegurancaCorporativa -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#SegurancaCorporativa">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Politica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Sensor -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#SensorAgua -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#SensorAgua">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#SensorFumaca -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#SensorFumaca">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#SensorGas -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#SensorGas">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#SensorPorta -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#SensorPorta">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#SensorTemperatura -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#SensorTemperatura">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ServicosAcompanhamento -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ServicosAcompanhamento">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaConforto"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaConforto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ServicosApoioAtividadesProfissionais -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ServicosApoioAtividadesProfissionais">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaAutonomia"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ServicosApoioEducacional -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ServicosApoioEducacional">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaAutonomia"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaAutonomia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ServicosConforto -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ServicosConforto">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ServicosMelhoriaAutonomia"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ServicosTratamentoEmergencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ServicosEncontrarCoisas -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ServicosEncontrarCoisas">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaConforto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ServicosGovernamentais -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ServicosGovernamentais">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaConforto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ServicosInformacaoLazer -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ServicosInformacaoLazer">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaConforto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ServicosLogisticos -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ServicosLogisticos">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaInternaConforto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ServicosMelhoriaAutonomia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ServicosMelhoriaAutonomia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ServicosTratamentoEmergencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ServicosOrientacao -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ServicosOrientacao">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaConforto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ServicosTransporte -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ServicosTransporte">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#AssistenciaExternaConforto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ServicosTratamentoEmergencia -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ServicosTratamentoEmergencia">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#SistemasAAL">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#possui"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Software"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#temRequisito"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Requisito"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#usadoEm"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Ambiente"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#éInfluenciadoPor"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Compliance"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Smartphone -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Smartphone">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#SocialAgent-UFO -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#SocialAgent-UFO">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Agent-UFO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Software -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Software"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Stakeholder -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Agent-UFO"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#define"/>
+                        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Requisito"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Agent-UFO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Substituibilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Substituibilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Portabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Switches -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Switches">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Termo -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Termo">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#PoliticasNormasInternas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Testabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Testabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Manutenabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Titulo -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Titulo">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#ISO"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#NBR"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#ToleranciaErro -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#ToleranciaErro">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Confiabilidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Usabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Usabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#QualidadeProduto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#UsuarioFinal -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#UsuarioFinal">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Pessoa"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Stakeholder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Utilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Utilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#RequisitoEtico"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Satisfacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#UtilizacaoRecursos -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#UtilizacaoRecursos">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#EficienciaDesempenho"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#Valvula -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Valvula">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#DispositivoEletrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#deConfidencialidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#deConfidencialidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Termo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Opcao1.owl#deResponsabilidade -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Opcao1.owl#deResponsabilidade">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Opcao1.owl#Termo"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Asilo"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Opcao1.owl#CasaGeriatrica"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Opcao1.owl#HabitacoesMedicas"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Opcao1.owl#Legislacao"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Opcao1.owl#NormasExternas"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Opcao1.owl#PoliticasNormasInternas"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
